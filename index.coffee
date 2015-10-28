@@ -3,25 +3,53 @@ command: "curl -s 'http://www3.septa.org/hackathon/NextToArrive/Suburban%20Stati
 refreshFrequency: 600000
 
 style: """
-margin-top: 10%
-margin-left: 50%
+    margin-top: 10%
+    margin-left: 50%
+    font-family: Helvetica Neue
+    color: #ff0000
+    padding 5px
+    h1
+        font-size: 20px
+        text-transform: uppercase
+        text-align: center
+        opacity: 0.75
+    h2
+        font-size: 14px
+        text-transform: uppercase
+        margin: 2.5px
+        padding: 2.5px
+    #a2b
+        color: #0000FF
+        font-size: 16px
 
 """
 
 render: (output) -> """
 <div id='septa'>
-<h1>Septa Regional Rail</h1>
-<h1 id='a2b'>Suburban To Lansdowne</h1>
-<div id='schedule1'>
-<h2 id='train_no'></h2>
-<h2 id='line'></h2>
-<h2 id='depart'></h2>
-<h2 id='delay'></h2>
-</div>
-<h1 id='b2a'></h1>
-<div id='schedule2'>
+    <h1>Septa Regional Rail</h1>
+    <h1 id='a2b'>Suburban To Lansdowne</h1>
+    <div id='schedule1'>
+        <div style="display: inline">
+            <h2>Train No.</h2>
+            <h2 id='train_no'></h2>
+        </div>
+        <div style="display: inline">
+            <h2>Line</h2>
+            <h2 id='line'></h2>
+        </div>
+        <div>
+            <h2>Departs</h2>
+            <h2 id='depart'></h2>
+        </div>
+        <div>
+            <h2>Delay</h2>
+            <h2 id='delay'></h2>
+        </div>
+    </div>
+    <h1 id='b2a'></h1>
+    <div id='schedule2'>
 
-</div>
+    </div>
 </div>
 """
 
