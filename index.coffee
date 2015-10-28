@@ -3,7 +3,7 @@ command: "curl -s 'http://www3.septa.org/hackathon/NextToArrive/Suburban%20Stati
 refreshFrequency: 600000
 
 style: """
-    margin-top: 10%
+    margin-top: 30%
     margin-left: 50%
     font-family: Helvetica Neue
     color: #ff0000
@@ -22,26 +22,31 @@ style: """
         color: #0000FF
         font-size: 16px
 
+    #container *
+        display: inline-block;
+
 """
 
 render: (output) -> """
 <div id='septa'>
-    <h1>Septa Regional Rail</h1>
+    <div id="container">
+    <img src="septa.widget/septa.png">
+    </div>
     <h1 id='a2b'>Suburban To Lansdowne</h1>
     <div id='schedule1'>
-        <div class="style="display: inline">
+        <div id="container">
             <span>Train No.</span>
             <h2 id='train_no'></h2>
         </div>
-        <div style="display: inline">
+        <div id="container">
             <h2>Line</h2>
             <h2 id='line'></h2>
         </div>
-        <div>
+        <div id="container">
             <h2>Departs</h2>
             <h2 id='depart'></h2>
         </div>
-        <div>
+        <div id="container">
             <h2>Delay</h2>
             <h2 id='delay'></h2>
         </div>
