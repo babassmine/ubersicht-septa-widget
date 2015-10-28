@@ -29,8 +29,8 @@ render: (output) -> """
     <h1>Septa Regional Rail</h1>
     <h1 id='a2b'>Suburban To Lansdowne</h1>
     <div id='schedule1'>
-        <div style="display: inline">
-            <h2>Train No.</h2>
+        <div class="style="display: inline">
+            <span>Train No.</span>
             <h2 id='train_no'></h2>
         </div>
         <div style="display: inline">
