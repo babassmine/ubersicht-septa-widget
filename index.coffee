@@ -23,14 +23,17 @@ style: """
         font-size: 16px
 
     #container *
-        display: inline-block;
+        display: inline-block
+
+    .schedule1
+        float: right
 
 """
 
 render: (output) -> """
 <div id='septa'>
     <div id="container">
-    <img src="septa.widget/septa.png">
+    <img src="septa.widget/septa.png" style="center">
     </div>
     <h1 id='a2b'>Suburban To Lansdowne</h1>
     <div id='schedule1'>
@@ -50,10 +53,6 @@ render: (output) -> """
             <h2>Delay</h2>
             <h2 id='delay'></h2>
         </div>
-    </div>
-    <h1 id='b2a'></h1>
-    <div id='schedule2'>
-
     </div>
 </div>
 """
