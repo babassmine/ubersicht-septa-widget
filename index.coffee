@@ -1,5 +1,8 @@
 command: "curl -s 'http://www3.septa.org/hackathon/NextToArrive/Suburban%20Station/Lansdowne/10'"
 
+$FROM_STATION = "Suburban"
+$TO_STATION = "Lansdowne"
+
 refreshFrequency: 600000
 
 style: """
@@ -30,12 +33,12 @@ style: """
 
 """
 
-render: (output) -> """
+render: (output,$FROM_STATION, $TO_STATION) -> """
 <div id='septa'>
     <div id="container">
     <img src="septa.widget/septa.png" style="center">
     </div>
-    <h1 id='a2b'>Suburban To Lansdowne</h1>
+    <h1 id='a2b'>$FROM_STATION To $TO_STATION</h1>
     <div id='schedule1'>
         <div id="container">
             <span>Train No.</span>
